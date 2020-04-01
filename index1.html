@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Description de ma page">
+    <title>Convertisseur euro/dollars</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <div class="convEuroDollars">
+          <h1 class="title-header">Convertisseurs € => $</h1>
+          <form action="js/index1.js" class="convED">
+            <label for="valEuro">Valeur en Euro</label>
+            <input type="text" name="valEuro" id="valEuro" placeholder="Valeur en euro">
+            <label for="valDollars">Valeur en Dollars</label>
+            <input type="text" name="valDollars" id="valDollars" placeholder="Valeur en dollars" readonly="readonly" >
+        </form>
+      </div>
+
+      <div class="calcPerimetre">
+        <h1 class="title-header">Calculateur de périmètres</h1>
+        <form action="js/index1.js" class="calcPerim">
+          <label for="longueur">Longueur</label>
+          <input type="text" name="longueur" id="long" placeholder="Longueur">
+          <label for="unitesMesureLong">Unités de mesure de la longueur</label>
+          <select name="unitesMesureLong" id="unitLong">
+            <option value="">--Please choose an units--</option>
+            <option value="mm">mm (millimètre)</option>
+            <option value="cm">cm (centimètre)</option>
+            <option value="dm">dm (décimètre)</option>
+            <option value="m">m (mètre)</option>
+            <option value="dam">dam (décamètre)</option>
+            <option value="hm">hm (hectamètre)</option>
+            <option value="km">km (kilomètre)</option>
+        </select>
+          <label for="largeur">Largeur</label>
+          <input type="text" name="largeur" id="larg" placeholder="Largeur">
+          <label for="unitesMesureLarg">Unités de mesure de la largeur</label>
+          <select name="unitesMesureLarg" id="unitLarg">
+              <option value="">--Please choose an units--</option>
+              <option value="mm">mm (millimètre)</option>
+              <option value="cm">cm (centimètre)</option>
+              <option value="dm">dm (décimètre)</option>
+              <option value="m">m (mètre)</option>
+              <option value="dam">dam (décamètre)</option>
+              <option value="hm">hm (hectamètre)</option>
+              <option value="km">km (kilomètre)</option>
+          </select>
+      </form>
+      <p class="resultCalcPerim">Résultat du calcul de périmètres</p>
+    </div>
+
+    <div class="convEuroDollars">
+        <h1 class="title-header">Convertisseur de températures °C / °K / °F</h1>
+        <form action="js/index1.js" class="convED">
+          <label for="valEuro">Valeur en Euro</label>
+          <input type="text" name="valEuro" id="valEuro" placeholder="Valeur en euro">
+          <label for="valDollars">Valeur en Dollars</label>
+          <input type="text" name="valDollars" id="valDollars" placeholder="Valeur en dollars" readonly="readonly" >
+      </form>
+    </div>
+
+      <script src="js/index1.js"></script>
+
+</body>
+</html> 
