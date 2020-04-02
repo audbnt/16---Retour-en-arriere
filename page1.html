@@ -25,7 +25,7 @@
         <h1 class="title-header">Calculateur de périmètres</h1>
         <form action="js/index2.js" class="calcPerim">
           <label for="longueur">Longueur</label>
-          <input type="number" name="longueur" id="long" placeholder="Longueur">
+          <input type="number" name="longueur" id="long" value="0" min="0">
           <select name="unitesMesureLong" id="unitLong">
             <option value="">--Please choose an units--</option>
             <option value="mm">mm (millimètre)</option>
@@ -39,7 +39,7 @@
         <br>
         <br>
           <label for="largeur">Largeur</label>
-          <input type="number" name="largeur" id="larg" placeholder="Largeur">
+          <input type="number" name="largeur" id="larg" value="0" min="0">
           <select name="unitesMesureLarg" id="unitLarg">
               <option value="">--Please choose an units--</option>
               <option value="mm">mm (millimètre)</option>
@@ -63,7 +63,7 @@
         <form action="js/index3.js" class="convED">
           <label for="temp">Temperature</label>
           <br>
-          <input type="text" name="temp" id="temp" placeholder="Temperature">
+          <input type="number" name="temp" id="temp" value="0">
           <br>
 
           <input type="button" id="unitButton1" class="unitsT" value="°C">

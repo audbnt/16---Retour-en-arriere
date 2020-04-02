@@ -3,30 +3,15 @@
 const serialNum = document.getElementById("serialNumber");
 const validation = document.getElementById("bpValid");
 const message = document.getElementById("messValErr");
+let isValid = false;
 
-function funcInput(){
 
+function funcClick(){
+    
     const serNum = serialNum.value ;
-    message.innerHTML = "" ;
-    let isValid = true;
-
     console.log(serNum);
     console.log(serNum.length);
-
-    // == Etape 1 : Vérification du format == //
-    if (isValid && (serNum.length !== 19) ) {
-        isValid = false;
-        message.innerHTML = "Regle 1 : Mauvaise longueur !" + "<br>";
-    } else if (isValid && (serNum[4] !== '-' || serNum[9] !== '-' || serNum[14] !== '-') ) {
-        isValid = false;
-        message.innerHTML = "Regle 1 : Mauvais format (tiret) !" + "<br>";
-    } else if (isValid && (isNaN(serNum.split('-').join('')))) {
-        isValid = false;
-        message.innerHTML = "Regle 1 : Mauvais format (chiffres) !" + "<br>";
-    } else if (isValid && (parseInt(serNum.split('-').join('')) !== parseFloat(serNum.split('-').join('')))) {
-        isValid = false;
-        message.innerHTML = "Regle 1 : Mauvais format (y'a un point) !" + "<br>";
-    }
+    message.innerHTML = "" ;
 
     const groups = serNum.split('-');
 
@@ -61,7 +46,40 @@ function funcInput(){
     }
 }
 
-validation.addEventListener("click", funcInput);
+function funcInput() {
+
+    const serNum = serialNum.value ;
+    message.innerHTML = "" ;
+
+    // == Etape 1 : Vérification du format == //
+    if ((serNum.length !== 19) ) {
+        isValid = false;
+        message.innerHTML = "Regle 1 : Mauvaise longueur !" + "<br>";
+    } else if ((serNum[4] !== '-' || serNum[9] !== '-' || serNum[14] !== '-') ) {
+        isValid = false;
+        message.innerHTML = "Regle 1 : Mauvais format (tiret) !" + "<br>";
+    } else if ((isNaN(serNum.split('-').join('')))) {
+        isValid = false;
+        message.innerHTML = "Regle 1 : Mauvais format (chiffres) !" + "<br>";
+    } else if ((parseInt(serNum.split('-').join('')) !== parseFloat(serNum.split('-').join('')))) {
+        isValid = false;
+        message.innerHTML = "Regle 1 : Mauvais format (y'a un point) !" + "<br>";
+    }else{
+        isValid = true ;
+    }
+
+    if(isValid){
+        validation.disabled = false ;
+    }else{
+        validation.disabled = true ;
+    }
+
+}
+
+
+
+serialNum.addEventListener("input", funcInput);
+validation.addEventListener("click", funcClick);
 
 
 
