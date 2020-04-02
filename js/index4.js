@@ -3,7 +3,6 @@
 const serialNum = document.getElementById("serialNumber");
 const validation = document.getElementById("bpValid");
 const message = document.getElementById("messValErr");
-let isValid = true;
 
 function funcInput(){
 
