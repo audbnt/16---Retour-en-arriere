@@ -68,10 +68,42 @@ function functPerim(){
 };
 
 long.addEventListener("input", functPerim);
-unitLong.addEventListener("input", functPerim);
+unitLong.addEventListener("change", functPerim);
 
 larg.addEventListener("input", functPerim);
-unitLarg.addEventListener("input", functPerim);
+unitLarg.addEventListener("change", functPerim);
 
 
+// correction de antho :
 
+/*
+const [lngValue, lngUnit, lrgValue, lrgUnit] = document.querySelectorAll("div:nth-child(2) input, div:nth-child(2) select");
+const perimeter = document.querySelector("#perimeter");
+
+function calculPerimeter() {
+    console.log(parseFloat(lngUnit.value));
+    console.log(parseFloat(lrgUnit.value));
+    // console.log(2 * (parseFloat(lngValue.value) + parseFloat(lrgValue.value)));
+    // perimeter.textContent;
+}
+
+function calculPerimeter() {
+    perimeter.textContent = 2 * (parseFloat(lngValue.value) / parseFloat(lngUnit.value) + parseFloat(lrgValue.value) / parseFloat(lrgUnit.value)) + "m";
+}
+
+function calculPerimeter() {
+    if (lngValue.value === "" || lrgValue.value === "") {
+        perimeter.textContent = "Vos valeurs ne sont pas corrects !";
+    } else {
+        perimeter.textContent = 2 * (parseFloat(lngValue.value) / parseFloat(lngUnit.value) + parseFloat(lrgValue.value) / parseFloat(lrgUnit.value)) + "m";
+    }
+}
+
+
+lngValue.addEventListener("input", calculPerimeter);
+lngUnit.addEventListener("change", calculPerimeter);
+lrgValue.addEventListener("input", calculPerimeter);
+lrgUnit.addEventListener("change", calculPerimeter);
+
+
+*/
