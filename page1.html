@@ -55,25 +55,33 @@
           <br>
           <br>
       </form>
-      <p class="resultCalcPerim">Résultat du calcul de périmètres</p>
+      <p id="resultCalcPerim"></p>
       <br>
       <br>
     </div>
 
-    <div class="convEuroDollars">
+    <div class="convTemp">
         <h1 class="title-header">Convertisseur de températures °C / °K / °F</h1>
         <form action="js/index3.js" class="convED">
           <label for="temp">Temperature</label>
           <br>
           <input type="text" name="temp" id="temp" placeholder="Temperature">
           <br>
-          <input type="button" value="°C">
-          <input type="button" value="°K">
-          <input type="button" value="°F">
+
+          <input type="button" id="unitButton1" class="unitsT" value="°C">
+          <input type="button" id="unitButton2" class="unitsT" value="°K">
+          <input type="button" id="unitButton3" class="unitsT" value="°F">
+        
       </form>
+      <p id="resultConvTemp">
+
+      </p>
+
     </div>
 
       <script src="js/index1.js"></script>
+      <script src="js/index2.js"></script>
+      <script src="js/index3.js"></script>
 
 </body>
 </html> 

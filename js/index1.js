@@ -16,16 +16,18 @@ const errorMessage = document.getElementById("error-message");
 
 // code factorisé :
 
-mEuro.addEventListener("input", function() {
-    const euroVal = parseFloat(mEuro.value);
-    if (isNaN(euroVal) || euroVal < 0) {
+function funcInput() {
+    const euroValue = parseFloat(mEuro.value);
+    if (isNaN(euroValue) || euroValue < 0) {
         mDollars.value = "";
         errorMessage.textContent = "Veuillez rentrer un nombre positif !";
     } else {
-        mDollars.value = (euroVal * 1.1).toFixed(1) + "$";
+        mDollars.value = (euroValue * 1.1).toFixed(1) + "$";
         errorMessage.textContent = "";
     }
-});
+}
+
+mEuro.addEventListener("input", funcInput);
 
 
 
