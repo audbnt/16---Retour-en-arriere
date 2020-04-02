@@ -80,3 +80,39 @@ function functConvTempK(){
 bpUnits1.addEventListener("click", functConvTempC);
 bpUnits2.addEventListener("click", functConvTempK);
 bpUnits3.addEventListener("click", functConvTempF);
+
+
+/* correction antho :
+const temperatureInput = document.getElementById("temperature");
+const cButton = document.getElementById("c-button");
+const fButton = document.getElementById("f-button");
+const kButton = document.getElementById("k-button");
+const cValue = document.getElementById("c-value");
+const fValue = document.getElementById("f-value");
+const kValue = document.getElementById("k-value");
+
+function evalTemperature(ev) {
+    const temperature = parseFloat(temperatureInput.value);
+    switch (ev.target.getAttribute("data-unit")) {
+        case "c":
+            cValue.textContent = temperature.toFixed(2) + "°C";
+            fValue.textContent = (9/5 * temperature + 32).toFixed(2) + "°F";
+            kValue.textContent = (temperature + 273.15).toFixed(2) + "K";
+            break;
+        case "f":
+            cValue.textContent = ((temperature - 32) * 5/9).toFixed(2) + "°C";
+            fValue.textContent = temperature.toFixed(2) + "°F";
+            kValue.textContent = ((temperature - 32) * 5/9 + 273.15).toFixed(2) + "K";
+            break;
+        case "k":
+            cValue.textContent = (temperature - 273.15).toFixed(2) + "°C";
+            fValue.textContent = ((temperature - 273.15) * 9/5 + 32).toFixed(2) + "°F";
+            kValue.textContent = temperature.toFixed(2) + "K";
+            break;
+    }
+}
+
+cButton.addEventListener("click", evalTemperature);
+fButton.addEventListener("click", evalTemperature);
+kButton.addEventListener("click", evalTemperature);
+*/

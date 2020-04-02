@@ -1,5 +1,3 @@
-// correction Antho :
-
 const serialNum = document.getElementById("serialNumber");
 const validation = document.getElementById("bpValid");
 const message = document.getElementById("messValErr");
@@ -18,7 +16,6 @@ function funcClick(){
     // == Etape 2 : Groupe 1 & Groupe 3 == //
     if (isValid && (groups[0] !== groups[2].split('').reverse().join('')) ) {
         isValid = false;
-        message.innerHTML = "Regle 2 ! \n Le 1er groupe de 4 chiffres n'est pas l'inverse du 3eme groupe." + "<br>";
     }
 
     const group3 = parseInt(groups[2]);
@@ -27,7 +24,6 @@ function funcClick(){
     // == Etape 3 : Groupe 3 & Groupe 2 == //
     if (isValid && ((group3 * 7) % 10000 !== group2) ) {
         isValid = false;
-        message.innerHTML = "Regle 3 ! \n Le 2eme groupe de chiffres n'est pas composé des 4 derniers chiffres du 3eme groupe multiplié par 7." + "<br>";
     }
 
     const group1 = parseInt(groups[0]);
@@ -36,7 +32,6 @@ function funcClick(){
     // == Etape 4 : La somme == //
     if (isValid && ((group1 + group2 + group3 + group4) % 10000 !== 0) ) {
         isValid = false;
-        message.innerHTML = "Regle 4 !  \n La somme des 4 groupes de chiffres ne donne pas un multiple de 10000." + "<br>";
     }
 
     if (isValid) {
@@ -49,21 +44,19 @@ function funcClick(){
 function funcInput() {
 
     const serNum = serialNum.value ;
+    console.log(serNum.length);
     message.innerHTML = "" ;
 
     // == Etape 1 : Vérification du format == //
     if ((serNum.length !== 19) ) {
         isValid = false;
-        message.innerHTML = "Regle 1 : Mauvaise longueur !" + "<br>";
+
     } else if ((serNum[4] !== '-' || serNum[9] !== '-' || serNum[14] !== '-') ) {
         isValid = false;
-        message.innerHTML = "Regle 1 : Mauvais format (tiret) !" + "<br>";
-    } else if ((isNaN(serNum.split('-').join('')))) {
+    }else if ((isNaN(serNum.split('-').join('')))) {
         isValid = false;
-        message.innerHTML = "Regle 1 : Mauvais format (chiffres) !" + "<br>";
     } else if ((parseInt(serNum.split('-').join('')) !== parseFloat(serNum.split('-').join('')))) {
         isValid = false;
-        message.innerHTML = "Regle 1 : Mauvais format (y'a un point) !" + "<br>";
     }else{
         isValid = true ;
     }
