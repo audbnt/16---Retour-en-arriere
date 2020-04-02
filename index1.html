@@ -13,16 +13,17 @@
       <div class="convEuroDollars">
           <h1 class="title-header">Convertisseurs € => $</h1>
           <form action="js/index1.js" class="convED">
-            <label for="valEuro">Valeur en Euro</label>
-            <input type="text" name="valEuro" id="valEuro" placeholder="Valeur en euro">
-            <label for="valDollars">Valeur en Dollars</label>
-            <input type="text" name="valDollars" id="valDollars" placeholder="Valeur en dollars" readonly="readonly" >
+            <label for="valeurEuro">Valeur en Euro</label>
+            <input type="text" name="euro" id="valEuro" >
+            <label for="valeurDollars"> => Valeur en Dollars</label>
+            <input type="text" name="dollars" id="valDollars" readonly="readonly" >
         </form>
+        <p id="error-message"></p>
       </div>
 
       <div class="calcPerimetre">
         <h1 class="title-header">Calculateur de périmètres</h1>
-        <form action="js/index1.js" class="calcPerim">
+        <form action="js/index2.js" class="calcPerim">
           <label for="longueur">Longueur</label>
           <input type="text" name="longueur" id="long" placeholder="Longueur">
           <label for="unitesMesureLong">Unités de mesure de la longueur</label>
@@ -61,10 +62,14 @@
 
     <div class="convEuroDollars">
         <h1 class="title-header">Convertisseur de températures °C / °K / °F</h1>
-        <form action="js/index1.js" class="convED">
-          <label for="temp">Temperatures</label>
+        <form action="js/index3.js" class="convED">
+          <label for="temp">Temperature</label>
+          <br>
           <input type="text" name="temp" id="temp" placeholder="Temperature">
-          <input type="button" value="units">
+          <br>
+          <input type="button" value="°C">
+          <input type="button" value="°K">
+          <input type="button" value="°F">
       </form>
     </div>
 

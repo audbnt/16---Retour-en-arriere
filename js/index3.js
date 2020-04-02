@@ -45,8 +45,8 @@
 
 
 
-let temperature = prompt("Veuillez saisir une température");
-const unit = prompt("Veuillez saisir une unité (°C, °F, K)");
+// let temperature = prompt("Veuillez saisir une température");
+// const unit = prompt("Veuillez saisir une unité (°C, °F, K)");
 
 const UNIT = ["C", "F", "K"];
 

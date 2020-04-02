@@ -2,10 +2,10 @@ let perim = 0.0 ;
 let longM = 0.0 ;
 let largM = 0.0 ;
 let def = true ;
-const long = (prompt("Saissez la longeur de la surface : "));
-const unitLong = prompt("Quel est l'unité de mesure de la longueur ?")
-const larg = (prompt("Saissez la largeur de la surface : "));
-const unitLarg = prompt("Quel est l'unité de mesure de la largeur ?");
+// const long = (prompt("Saissez la longeur de la surface : "));
+// const unitLong = prompt("Quel est l'unité de mesure de la longueur ?")
+// const larg = (prompt("Saissez la largeur de la surface : "));
+// const unitLarg = prompt("Quel est l'unité de mesure de la largeur ?");
 
 
 if ( long > 0 && larg > 0) {
