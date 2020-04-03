@@ -4,3 +4,17 @@ body {
     text-align: center;
     color: navy;
 }
+
+input {
+    min-width: 146px;
+}
+
+.error {
+    color: #a00;
+    font-weight: bold;
+}
+
+.valid {
+    color: #0a0;
+    font-family: Consolas, monospace;
+}
