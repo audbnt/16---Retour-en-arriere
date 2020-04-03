@@ -14,12 +14,17 @@
         <h1 class="title-header">Invalid serial number !</h1>
     </header>
 
-    <div action="js/index4.js">
+    <!-- <div action="js/index4.js">
         <label for="serialNumber">Entrez un numero de série</label>
         <input type="text" name="serialNumber" id="serialNumber" minlength="19" maxlength = "19" placeholder="2415-5994-5142-6449" required>
         <input type="submit" id="bpValid" value="Valider" disabled>
         <p id="messValErr"></p>
-    </div>
+    </div> -->
+
+    <label for="serialInput">Numéro de série</label>
+    <input type="text" placeholder="XXXX-XXXX-XXXX-XXXX" id="serialInput" minlength="19" maxlength="19"/>
+    <button id="checkButton" disabled>Vérifier</button>
+    <p id="message"></p>
 
       <script src="js/index4.js"></script>
 
