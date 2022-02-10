@@ -12,6 +12,6 @@
     "bootstrap": "^4.4.1",
     "css-concat": "0.0.4",
     "install": "^0.13.0",
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
